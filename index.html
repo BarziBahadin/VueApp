@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h1>hello form vue </h1>
+    <div id="app">
+        <h2>I am the template now</h2>
+        <div v-if="showBooks">
+            <p>{{title}}</p>
+            <p>{{author}}</p>
+            <p>{{type}}</p>
+            <p>{{age}}</p>
+            <button @click="age++">increase age</button>
+            <button @click="age--">decreeing age</button>
+            <button @click="changeTitle('not giving a fuck') ">change title</button>
+
+        </div>
+        <br><br>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">
+                Hide Books
+            </span>
+            <span v-else>
+                Show Books
+            </span>
+        </button>
+        <div v-show="showBooks">currently showing books</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
