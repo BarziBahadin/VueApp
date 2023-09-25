@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>this is from the game branch that I will change the code to a game </h1>
     <h1>{{ title }}</h1>
     <hr>
     <p>welcome...</p>
