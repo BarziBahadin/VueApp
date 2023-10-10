@@ -1,6 +1,6 @@
 # VueApp
 
-from net Ninja cours 
+from net Ninja 
 
-The master will be the final product that I have at the end of the course the other branches are the proses and the steps that I have learned.
+handling form inputs 
 
