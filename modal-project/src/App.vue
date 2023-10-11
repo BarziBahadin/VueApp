@@ -13,7 +13,7 @@ components:{SignupForm}
 <style>
 body{
   margin: 0;
-  padding: 15rem;
+  padding: 0rem 3rem 3rem;
   background:#eee;
 }
 </style>
