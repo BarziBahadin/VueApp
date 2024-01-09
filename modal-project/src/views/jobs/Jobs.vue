@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="jobs.length">
         <h1>Jobs list </h1>
         <div v-for="job in jobs" :key="job.id" class="job">
             <router-link :to="{ name: 'JobDetails', params: { id: job.id } }">
@@ -7,24 +7,27 @@
             </router-link>
         </div>
     </div>
+    <div v-else>loading jobs</div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            jobs: [
-                { title: "ninja UX sesigner ", id: 1, details: "mee we dooo" },
-                { title: "Barzi UX dev ", id: 2, details: "this tis iss it  " },
-                { title: "sam UX eng ", id: 3, details: "mee we dooo" }
-            ]
+            jobs: []
         }
+    },
+    mounted() {
+        fetch('http://localhost:3000/jobs')
+            .then(res => res.json())
+            .then(data => this.jobs = data)
+            .catch(err => console.log(err.message))
     }
 }
 </script>
 
 <style>
-  .job h2{
+.job h2 {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
@@ -32,10 +35,13 @@ export default {
     max-width: 600px;
     cursor: pointer;
     color: #444;
-  }
-  .job h2:hover {
+}
+
+.job h2:hover {
     background: #ded;
-  }
-  .job a{
+}
+
+.job a {
     text-decoration: none;
-  }</style>
+}
+</style>
