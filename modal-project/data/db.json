@@ -1,0 +1,8 @@
+{
+  "jobs": [
+    { "title": "ninja UX sesigner ", "id": 1, "details": "mee we dooo" },
+    { "title": "Barzi UX dev ", "id": 2, "details": "this tis iss it  " },
+    { "title": "sam UX eng ", "id": 3, "details": "mee we dooo" }
+  ],
+  "blogs": [{ "id": 1, "text": "this is some text form a blogss" }]
+}
